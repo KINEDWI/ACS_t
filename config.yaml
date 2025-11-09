@@ -1,0 +1,3 @@
+database: /skud.db
+gpio_pin: 18
+door_open_ms: 3000
