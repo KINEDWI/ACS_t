@@ -1,0 +1,112 @@
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Reveal on scroll animation */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom hover effects */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Custom shadows */
+.custom-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Email card styles */
+.email-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.email-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.email-card.unread {
+    border-left: 3px solid #3B82F6;
+    font-weight: 500;
+}
+
+/* Active folder styles */
+.mail-folder.active {
+    background-color: #EFF6FF;
+    color: #2563EB;
+    font-weight: 500;
+}
+
+/* Screen transitions */
+.screen-transition {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.screen-transition.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    aside {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+        border-top: 1px solid #e5e7eb;
+        border-right: none;
+    }
+
+    .email-list {
+        margin-bottom: 200px;
+    }
+}
